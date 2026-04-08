@@ -1,0 +1,77 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>YouTube Volume Boost</title>
+    <style>
+      :root {
+        color-scheme: light dark;
+      }
+      body {
+        font-family: Arial, Helvetica, sans-serif;
+        margin: 0;
+        padding: 14px;
+        width: 280px;
+      }
+      .wrap {
+        display: grid;
+        gap: 12px;
+      }
+      .title {
+        font-size: 16px;
+        font-weight: 700;
+      }
+      .sub {
+        font-size: 12px;
+        line-height: 1.4;
+        opacity: 0.8;
+      }
+      .row {
+        display: grid;
+        gap: 8px;
+      }
+      .label-line {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 8px;
+      }
+      input[type="range"] {
+        width: 100%;
+      }
+      .value {
+        min-width: 52px;
+        text-align: right;
+        font-weight: 700;
+      }
+      button {
+        border: 1px solid rgba(127,127,127,.4);
+        background: transparent;
+        padding: 8px 10px;
+        border-radius: 8px;
+        cursor: pointer;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="wrap">
+      <div>
+        <div class="title">YouTube Volume Boost</div>
+        <div class="sub">Boost YouTube and YouTube Music volume beyond 100%. Very high values may distort or clip.</div>
+      </div>
+
+      <div class="row">
+        <div class="label-line">
+          <label for="boost">Boost</label>
+          <div class="value" id="boostValue">100%</div>
+        </div>
+        <input id="boost" type="range" min="100" max="500" step="5" value="100">
+      </div>
+
+      <button id="resetBtn" type="button">Reset to 100%</button>
+    </div>
+
+    <script src="popup.js"></script>
+  </body>
+</html>
